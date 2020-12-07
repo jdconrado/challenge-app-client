@@ -1,0 +1,46 @@
+<div id="product-content">
+    <mat-card class="alert-danger" *ngIf="toogleAlert.on">{{toogleAlert.message}}</mat-card>
+    <mat-card>
+        <mat-card-content>
+            <div class="product-icon">
+                <mat-icon>verified</mat-icon>
+            </div>
+            <div class="loading-spinner" *ngIf="loading">
+                <mat-spinner diameter="45" color="accent"></mat-spinner>
+            </div>
+            <div class="product-info" *ngIf="!loading">
+                <form class="product-form" (ngSubmit)="onUpdate()">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Product Title</mat-label>
+                        <input required [(ngModel)]="product.title" type="text" name="product-title" matInput placeholder="Your awesome product title">
+                        <mat-icon matSuffix>title</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Product Price</mat-label>
+                        <input required [(ngModel)]="product.price" type="number" name="product-price" min="0" matInput placeholder="ex. 125000">
+                        <mat-icon matSuffix>attach_money</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Product Stock</mat-label>
+                        <input required [(ngModel)]="product.stock" type="number" name="product-stock" min="0" matInput placeholder="ex. 7">
+                        <mat-icon matSuffix>check_circle</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Category</mat-label>
+                        <mat-select required name="category" [(ngModel)]="product.category.id">
+                            <mat-option *ngFor="let category of categories" [value]="category.id">
+                                {{category.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <div class="buttons-section">
+                        <button (click)="onCancel()" mat-raised-button>Cancel</button>
+                        <button (click)="onDelete()" mat-raised-button color="warn">Detele</button>
+                        <button type="submit" mat-raised-button color="accent">Update</button>
+                    </div>
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

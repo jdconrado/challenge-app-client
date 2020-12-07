@@ -1,0 +1,20 @@
+#profile-content{
+    padding: 5%;
+    .user-icon{
+        text-align: center;
+        margin-bottom: 35px;
+        mat-icon{
+            margin-left: -95px;
+            font-size: 120px;
+        }
+    }
+
+    .user-info{
+        font-size: 16px;
+        table{
+            width: 80%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+}

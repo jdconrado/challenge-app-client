@@ -1,0 +1,10 @@
+<mat-nav-list class="sidebar">
+    <div class="links-section">
+        <a (click)="onClick()" mat-list-item routerLink="/dashboard"><div>Dashboard</div></a>
+        <a (click)="onClick()" mat-list-item routerLink="/my-products"><div>My Products</div></a>
+        <a (click)="onClick()" mat-list-item routerLink="/profile"><div>Profile</div></a>
+    </div>
+    <div class="btn-section">
+        <button (click)="logOut()" mat-flat-button color="accent"><div>Log Out</div></button>
+    </div>
+</mat-nav-list>

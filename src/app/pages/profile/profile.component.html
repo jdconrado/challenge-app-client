@@ -1,0 +1,45 @@
+<div id="profile-content">
+    <mat-card>
+        <mat-card-content>
+            <div class="user-icon">
+                <mat-icon>mood</mat-icon>
+            </div>
+            <div class="user-info">
+                <table mat-table>
+                    <tr mat-row>
+                        <td mat-cell>
+                            <strong>Name:</strong>
+                        </td>
+                        <td mat-cell>
+                            {{user.name}}
+                        </td>
+                    </tr>
+                    <tr mat-row>
+                        <td mat-cell>
+                            <strong>Last Name:</strong>
+                        </td>
+                        <td mat-cell>
+                            {{user.lastName}}
+                        </td>
+                    </tr>
+                    <tr mat-row>
+                        <td mat-cell>
+                            <strong>Email:</strong>
+                        </td>
+                        <td mat-cell>
+                            {{user.email}}
+                        </td>
+                    </tr>
+                    <tr mat-row>
+                        <td mat-cell>
+                            <strong>Registered at:</strong>
+                        </td>
+                        <td mat-cell>
+                            {{user.createdAt}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

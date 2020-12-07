@@ -1,0 +1,10 @@
+$phone-breakpoint:480px;
+#my-products-content{
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media screen and (max-width: $phone-breakpoint){
+        padding-left: auto;
+        padding-right: auto;
+    }
+}

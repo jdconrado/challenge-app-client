@@ -1,0 +1,74 @@
+$accent-color: #69f0ae;
+$primary-color: #9b27b0;
+$phone-breakpoint:480px;
+
+@mixin fh-flex {
+    height: 100vh;
+    display: flex;
+}
+
+#login-section{
+    @include fh-flex();
+    .login-background{
+        background-color: $accent-color;
+        @include fh-flex();
+        width: 60vw;
+        @media screen and (max-width: $phone-breakpoint){
+            &{
+                display: none;
+            }
+        }
+        #logo{
+            width: 50%;
+            margin: auto auto;
+        }
+    }
+
+    .form-holder{
+        @include fh-flex();
+        width: 40vw;
+        
+        @media screen and (max-width: $phone-breakpoint){
+            &{
+                width: 100%;
+            }
+        }
+        .user-form{
+            text-align: center;
+            width: 60%;
+            margin: auto auto;
+            
+            .alert-danger{
+                background-color: $primary-color;
+                color: white;
+                margin-bottom: 20px;
+                @media screen and (max-width: $phone-breakpoint){
+                    &{
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            h1{
+                font-size: 38px;
+                padding-bottom: 20px;
+            }
+            
+            @media screen and (max-width: $phone-breakpoint){
+                &{
+                    width: 80%;
+                }
+            }
+            button{
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            a{
+                color: $accent-color;
+            }
+        }
+        .loading-spinner{
+            margin: auto auto;
+        }
+    }
+}

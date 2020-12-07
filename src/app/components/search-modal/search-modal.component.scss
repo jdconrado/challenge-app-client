@@ -1,0 +1,10 @@
+$phone-breakpoint:480px;
+mat-dialog-content{
+    width: 400px;
+    max-width: 80%;
+    margin: 0 0;
+    align-content: center;
+    form{
+        width: 100%;
+    }
+}

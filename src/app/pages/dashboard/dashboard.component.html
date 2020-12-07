@@ -1,0 +1,32 @@
+<div id="dashboard-content">
+    <div id="add-more-holder">
+        <button id="clear-search" *ngIf="canClearSearch" (click)="clearSearch()" mat-fab color="primary">
+            <mat-icon class="add-icon">clear</mat-icon>
+        </button>
+        <button id="search" (click)="onSearch()" mat-fab color="accent">
+            <mat-icon class="add-icon">search</mat-icon>
+        </button>
+        <button id="add-more" (click)="onCreate()" mat-fab color="accent">
+            <mat-icon class="add-icon">add_circle</mat-icon>
+        </button>
+    </div>
+
+    <div class="loading-spinner" *ngIf="loading">
+        <mat-spinner diameter="45" color="accent"></mat-spinner>
+    </div>
+
+    <div class="products-holder" *ngIf="!loading">
+        <div id="empty-message" *ngIf="products.length === 0">
+            <p>Create your first product!</p>
+            <mat-icon>face</mat-icon>
+        </div>
+        <mat-grid-list [cols]="colsNumber" rowHeight="1:1">
+            <mat-grid-tile *ngFor="let product of products">
+                <app-product [product]="product"></app-product>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <div class="load-more-area" *ngIf="loadMore">
+            <button mat-flat-button color="accent">Load More</button>
+        </div>
+    </div>
+</div>

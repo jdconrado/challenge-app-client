@@ -1,0 +1,21 @@
+.home-section{
+    height: 100vh;
+    display: flex;
+    .home-content{
+        width: 70%;
+        max-width: 500px;
+        margin: auto auto;
+    }
+    .logo{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .buttons-section{
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+    }
+    #sign-up-btn{
+        margin-right: 10px;
+    }
+}

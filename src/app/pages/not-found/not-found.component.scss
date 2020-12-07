@@ -1,0 +1,29 @@
+$accent-color: #69f0ae;
+$phone-breakpoint:480px;
+
+#not-found-section{
+    height: 90vh;
+    display: grid;
+}
+
+#content{
+    width: 70%;
+    max-width: 400px;
+    margin: auto auto;
+
+    #not-found-message{
+        text-align: center;
+        font-size: 124px;
+        margin-bottom: 15%;
+        color: $accent-color;
+        @media screen and (max-width: $phone-breakpoint) {
+            &{
+                font-size: 58px;
+            }
+        }
+    }
+    p{
+        margin-bottom: 25px;
+        text-align: center;
+    }
+}

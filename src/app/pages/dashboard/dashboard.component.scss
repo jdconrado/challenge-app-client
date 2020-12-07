@@ -1,0 +1,60 @@
+$phone-breakpoint:480px;
+#dashboard-content{
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media screen and (max-width: $phone-breakpoint){
+        padding-left: auto;
+        padding-right: auto;
+    }
+}
+
+#add-more{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+}
+
+#search{
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 1;
+}
+
+#clear-search{
+    position: fixed;
+    bottom: 170px;
+    right: 30px;
+    z-index: 1;
+}
+
+.products-holder{
+    padding-bottom: 60px;
+    padding-top: 20px;
+
+    #empty-message{
+        text-align: center;
+        font-size: 16px;
+        padding-top: 20%;
+        mat-icon{
+            margin-left: -40px;
+            font-size: 70px;
+        }
+    }
+}
+
+.loading-spinner{
+    margin: 100px auto;
+    max-width: 75px;
+}
+
+.load-more-area{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+    button{
+        width: 50%;
+    }
+}

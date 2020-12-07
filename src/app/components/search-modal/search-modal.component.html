@@ -1,0 +1,57 @@
+<h2 mat-dialog-title>Search options</h2>
+<mat-dialog-content>
+    <form>
+        <mat-form-field class="fw-input" appearance="fill">
+            <mat-label>Search product title</mat-label>
+            <input type="text" [(ngModel)]="options.name" name="product-name" matInput placeholder="Product Title">
+        </mat-form-field>
+        <mat-accordion>
+            <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                    Price
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-form-field class="fw-input" appearance="fill">
+                    <mat-label>Min Price</mat-label>
+                    <input matInput type="number" name="price-from" placeholder="0" [(ngModel)]="options.priceFrom">
+                </mat-form-field>
+                <mat-form-field class="fw-input" appearance="fill">
+                    <mat-label>Max Price</mat-label>
+                    <input matInput type="number" name="price-to" placeholder="999999999" [(ngModel)]="options.priceTo">
+                </mat-form-field>
+            </mat-expansion-panel>
+            <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                    Stock
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-form-field class="fw-input" appearance="fill">
+                    <mat-label>Min Stock</mat-label>
+                    <input matInput type="number" name="stock-from" placeholder="0" [(ngModel)]="options.stockFrom">
+                </mat-form-field>
+                <mat-form-field class="fw-input" appearance="fill">
+                    <mat-label>Max Stock</mat-label>
+                    <input matInput type="number" name="stock-to" placeholder="999999999" [(ngModel)]="options.stockTo">
+                </mat-form-field>
+            </mat-expansion-panel>
+        </mat-accordion>
+        <mat-form-field class="fw-input" appearance="fill">
+            <mat-label>Category</mat-label>
+            <mat-select name="category" [(ngModel)]="options.category">
+                <mat-option selected [value]="-1">
+                    All
+                </mat-option>
+                <mat-option *ngFor="let category of categories" [value]="category.id">
+                    {{category.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-button [mat-dialog-close]="undefined">Cancel</button>
+    <button mat-button [mat-dialog-close]="options" color="accent">Search</button>
+</mat-dialog-actions>

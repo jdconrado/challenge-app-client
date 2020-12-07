@@ -1,0 +1,21 @@
+$phone-breakpoint:480px;
+.app-content{
+    height: 100vh;
+    .main-container{
+        min-height: 100%;
+        .belowHeader{
+            top: 64px;
+        }   
+        .sidebar{
+            width: 200px;
+        }
+        @media screen and (max-width: $phone-breakpoint){
+            .belowHeader{
+                top: 56px;
+            }
+            .sidebar{
+                width: 80%;
+            }
+        }
+    }
+}

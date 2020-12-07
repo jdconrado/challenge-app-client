@@ -1,0 +1,22 @@
+<mat-card class="product-card">
+    <mat-card-header>
+        <mat-card-title>{{product.title}}</mat-card-title>
+        <mat-card-subtitle>{{product.category.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-icon>{{productIcon}}</mat-icon>
+    <mat-card-content>
+        <div class="content">
+            <div class="price">
+                <b>Price:</b>
+                <p>{{product.price}}</p>
+            </div>
+            <div class="stock">
+                <b>Stock:</b>
+                <p>{{product.stock}}</p>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions *ngIf="userEditable">
+        <button [routerLink]="['/product', product.id]" mat-flat-button color="accent">Edit</button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,52 @@
+$primary-color: #9b27b0;
+$phone-breakpoint:480px;
+
+.loading-spinner{
+    margin: 100px auto;
+    max-width: 75px;
+}
+
+#product-content{
+    padding: 5%;
+    margin-bottom: 30px;
+    
+    .alert-danger{
+        background-color: $primary-color;
+        color: white;
+        margin-bottom: 20px;
+        @media screen and (max-width: $phone-breakpoint){
+            &{
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .product-icon{
+        text-align: center;
+        margin-bottom: 35px;
+        mat-icon{
+            margin-left: -95px;
+            font-size: 120px;
+        }
+    }
+
+    .product-info{
+        width: 100%;
+        .product-form{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 480px;
+        }
+    }
+
+    .buttons-section{
+        text-align: center;
+        margin-bottom: 10px;
+        button{
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    }
+}
